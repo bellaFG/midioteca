@@ -1,0 +1,6 @@
+@Midioteca_HostAddress = http://localhost:5109
+
+GET {{Midioteca_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
