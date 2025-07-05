@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using MidiotecaWeb.Models;
+using Midioteca.Models;
 
-namespace MidiotecaWeb.Data
+namespace Midioteca.Data
 {
     public class MidiotecaDbContext : DbContext
     {

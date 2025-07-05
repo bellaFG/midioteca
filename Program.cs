@@ -1,22 +1,49 @@
 using Microsoft.EntityFrameworkCore;
-using MidiotecaWeb.Data;  // Importa seu DbContext correto
+using Midioteca.Data;
+using AutoMapper;
+using Microsoft.OpenApi.Models;
+using Midioteca.Dtos.Livro;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configura o DbContext para usar SQL Server com a connection string do appsettings.json
+// Add services to the container.
 builder.Services.AddDbContext<MidiotecaDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configura o Swagger / OpenAPI
-builder.Services.AddOpenApi();
+builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<ILivroService, LivroService>();
+
+
+// Swagger
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Midioteca API",
+        Version = "v1",
+        Description = "API para gerenciamento de livros, filmes e resenhas."
+    });
+});
+
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+// Middleware pipeline
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
