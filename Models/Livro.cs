@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MidiotecaWeb.Models
+namespace Midioteca.Models
 {
     public class Livro : Entity
     {

@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace MidiotecaWeb.Models
+namespace Midioteca.Models
 {
     public class FilmeUsuario : Entity
     {

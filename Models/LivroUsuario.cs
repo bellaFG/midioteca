@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace MidiotecaWeb.Models
+namespace Midioteca.Models
 {
     public class LivroUsuario : Entity
     {
@@ -19,7 +19,7 @@ namespace MidiotecaWeb.Models
     public enum StatusLeitura
     {
         Nenhum = 0,
-        DesejoLer = 1, 
+        DesejoLer = 1,
         Lendo = 2,
         Lido = 3,
         Abandonado = 4

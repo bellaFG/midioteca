@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MidiotecaWeb.Dtos.Livro
+namespace Midioteca.Dtos.Livro
 {
     public class LivroCreateDto
     {

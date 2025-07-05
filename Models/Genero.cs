@@ -1,4 +1,4 @@
-namespace MidiotecaWeb.Models
+namespace Midioteca.Models
 {
     public class Genero : Entity
     {
