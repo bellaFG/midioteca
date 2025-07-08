@@ -1,8 +1,10 @@
+using Midioteca.Models;
+
 namespace Midioteca.Models
 {
     public class Genero : Entity
     {
         public string Nome { get; set; }
-        public virtual ICollection<Livro> Livros { get; set; } = new List<Livro>();
+        public virtual ICollection<Midia> Midias { get; set; } = new List<Midia>();
     }
 }

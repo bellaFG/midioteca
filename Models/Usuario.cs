@@ -1,3 +1,5 @@
+using Midioteca.Models;
+
 namespace Midioteca.Models
 {
     public class Usuario : Entity
@@ -7,9 +9,7 @@ namespace Midioteca.Models
         public string Senha { get; set; } = string.Empty;
         public bool Ativo { get; set; } = true;
 
-        public virtual ICollection<LivroUsuario> LivrosRelacionados { get; set; } = new List<LivroUsuario>();
-        public virtual ICollection<FilmeUsuario> FilmesRelacionados { get; set; } = new List<FilmeUsuario>();
-        public virtual ICollection<Resenha> Resenhas { get; set; } = new List<Resenha>();
+        public virtual ICollection<ConsumoMidia> ConsumosMidia { get; set; } = new List<ConsumoMidia>();
 
     }
 }

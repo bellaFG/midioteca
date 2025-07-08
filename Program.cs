@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Midioteca.Data;
 using AutoMapper;
 using Microsoft.OpenApi.Models;
-using Midioteca.Dtos.Livro;
+
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,9 @@ builder.Services.AddDbContext<MidiotecaDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<ILivroService, LivroService>();
+
+
+
 
 
 // Swagger

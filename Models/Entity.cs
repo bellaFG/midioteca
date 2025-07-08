@@ -1,3 +1,5 @@
+using Midioteca.Models;
+
 namespace Midioteca.Models
 {
     public class Entity
