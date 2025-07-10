@@ -105,6 +105,9 @@ namespace Midioteca.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -113,7 +116,7 @@ namespace Midioteca.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("SenhaHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
