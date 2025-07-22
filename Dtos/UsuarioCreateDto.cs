@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Midioteca.Models;
 
 namespace Midioteca.Dtos
 {
