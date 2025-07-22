@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Midioteca.Data;
 
@@ -11,9 +12,11 @@ using Midioteca.Data;
 namespace Midioteca.Migrations
 {
     [DbContext(typeof(MidiotecaDbContext))]
-    partial class MidiotecaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250715224631_AddTipoMidiaToMidia")]
+    partial class AddTipoMidiaToMidia
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

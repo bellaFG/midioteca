@@ -38,6 +38,7 @@ builder.Services.AddSwaggerGen(c =>
 
 // Registro das Services
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IMidiaService, MidiaService>();
 
 // 📌 Aqui você pode registrar mais Services conforme for criando:
 // builder.Services.AddScoped<ILivroService, LivroService>();
